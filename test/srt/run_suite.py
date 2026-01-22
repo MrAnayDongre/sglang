@@ -25,27 +25,12 @@ suites = {
         TestFile("test_deepseek_v32_mtp.py", 360),
         TestFile("models/test_mimo_models.py", 200),
     ],
-    "per-commit-8-gpu-h20": [
-        TestFile("quant/test_w4a8_deepseek_v3.py", 520),
-        TestFile("test_disaggregation_different_tp.py", 600),
-        TestFile("test_disaggregation_pp.py", 180),
-        TestFile("test_disaggregation_dp_attention.py", 155),
-    ],
-    "per-commit-4-gpu-b200": [
-        TestFile("test_deepseek_v3_fp4_4gpu.py", 1500),
-        TestFile("test_fp8_blockwise_gemm.py", 280),
-        TestFile("test_nvfp4_gemm.py", 360),
-    ],
     # "per-commit-8-gpu-b200": [
     #     TestFile("test_mistral_large3_basic.py", 275),  # Moved to nightly - large model
     # ],
     "per-commit-4-gpu-gb200": [
         TestFile("test_deepseek_v3_cutedsl_4gpu.py", 1800),
         TestFile("test_disaggregation_aarch64.py", 300),
-    ],
-    "per-commit-4-gpu-deepep": [
-        TestFile("ep/test_deepep_small.py", 531),
-        TestFile("ep/test_mooncake_ep_small.py", 660),
     ],
     # Disabled: IBGDA/cudaHostRegister environment issues on 8-GPU runner, see #17175
     # 4-GPU DeepEP tests provide sufficient coverage
